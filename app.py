@@ -13,8 +13,6 @@ st.header(":blue[US Vehecle Data Base Analysis and Visualization]")
 
 st.write("*reading the csv into pandas df and viewing sample of the df.*")
 df_vehicles = pd.read_csv('vehicles_us.csv')
-st.write (df_vehicles.sample(3))
-
 
 df_vehicles ["is_4wd"] = df_vehicles['is_4wd'].fillna(0)
 df_vehicles.paint_color = df_vehicles.paint_color.fillna('unknown')
