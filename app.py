@@ -8,7 +8,7 @@ import plotly.figure_factory as ff
 
 
 
-st.header(":blue[US Vehecle Data Base Analysis and Visualization]")
+st.header(":blue[US Vehecle Database Analysis and Visualization]")
        
 
 st.write("*reading the csv into pandas df and viewing sample of the df.*")
