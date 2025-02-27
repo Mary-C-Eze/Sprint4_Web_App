@@ -11,7 +11,7 @@ import plotly.figure_factory as ff
 st.header(":blue[US Vehecle Database Analysis and Visualization]")
        
 
-st.write("*reading the csv into pandas df and viewing sample of the df.*")
+"reading the csv into pandas df and viewing sample of the df."
 df_vehicles = pd.read_csv('vehicles_us.csv')
 
 df_vehicles ["is_4wd"] = df_vehicles['is_4wd'].fillna(0)
