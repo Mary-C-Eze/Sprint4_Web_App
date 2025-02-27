@@ -16,31 +16,29 @@ st.write(df_vehicles = pd.read_csv('../vehicles_us.csv'))
 st.write (df_vehicles.sample(3))
 
 
-st.write (
-   "*Exploring the df_vehicles.*",
-df_vehicles.info(),
+st.write ("*Exploring the df_vehicles.*")
+st.write (df_vehicles.info())
 
- "*the price is in normal format and no missing value. Model_year, cylinders, omometer, is_4wkd have some missing values; and type float will be converted to integer since the zeros have no relevance. No missing value in model, condition, transmission, type; and their format type object is good. date_posted will be converted to datetime format.*",
-
-df_vehicles['is_4wd'].unique(),
+st.write ("*the price is in normal format and no missing value. Model_year, cylinders, omometer, is_4wkd have some missing values; and type float will be converted to integer since the zeros have no relevance. No missing value in model, condition, transmission, type; and their format type object is good. date_posted will be converted to datetime format.*")
+st.write (df_vehicles['is_4wd'].unique())
 
 
-"*The nan value in column is_4wd will be converted to 0 (assuming that it is bool where 1 is yes and 0 is not 4wd).*",
+st.write ("*The nan value in column is_4wd will be converted to 0 (assuming that it is bool where 1 is yes and 0 is not 4wd).*")
+
+st.write (df_vehicles ["is_4wd"] = df_vehicles['is_4wd'].fillna(0))
+
+st.write (df_vehicles.paint_color = df_vehicles.paint_color.fillna('unknown'))
+
+st.write (df_vehicles = df_vehicles.dropna())
 
 
-df_vehicles['is_4wd'] = df_vehicles['is_4wd'].fillna(0),
-df_vehicles.paint_color = df_vehicles.paint_color.fillna('unknown'),
-df_vehicles = df_vehicles.dropna(),
+st.write ("*Converting the columns data type from float to int*")
 
+st.write (df_vehicles[['model_year', 'cylinders', 'odometer', 'is_4wd']] = df_vehicles[['model_year', 'cylinders', 'odometer', 'is_4wd']].astype(int))
 
-"*Converting the columns data type from float to int*",
-df_vehicles[['model_year', 'cylinders', 'odometer', 'is_4wd']] = df_vehicles[['model_year', 'cylinders', 'odometer', 'is_4wd']].astype(int),
+st.write ("*extracting manufacturer from the model name*")
 
-"*extracting manufacturer from the model name*",
-
-df_vehicles['manufacturer'] = df_vehicles['model'].apply(lambda x: x.split()[0])
-
-)
+st.write (df_vehicles['manufacturer'] = df_vehicles['model'].apply(lambda x: x.split()[0]))
 
 
 st.header("Disribution of the Day Listed")
