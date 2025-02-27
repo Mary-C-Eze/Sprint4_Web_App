@@ -20,8 +20,7 @@ st.write (
    "*Exploring the df_vehicles.*"
 df_vehicles.info()
 
- "*the price is in normal format and no missing value. Model_year, cylinders, omometer, is_4wkd have some missing values; and type float will be converted to integer since the zeros have no relevance. No missing value in model, condition, transmission, type; and their format "type object" is good. date_posted will be converted to datetime format. 
-*"
+ "*the price is in normal format and no missing value. Model_year, cylinders, omometer, is_4wkd have some missing values; and type float will be converted to integer since the zeros have no relevance. No missing value in model, condition, transmission, type; and their format type object is good. date_posted will be converted to datetime format.*"
 
 df_vehicles['is_4wd'].unique()
 
